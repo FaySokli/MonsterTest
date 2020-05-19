@@ -14,6 +14,16 @@ import java.util.Map;
 public class AGoodMonsterDao implements MonsterDao {
 
     Map<Integer, Monster> monsters = new HashMap<>();
+
+    //Constructor
+    private final String MONSTER_FILE;
+    public AGoodMonsterDao(){
+        MONSTER_FILE = "test.txt";
+    }
+    
+    public AGoodMonsterDao(String testFile){
+        MONSTER_FILE = testFile;
+    }
     
     @Override
     public Monster addMonster(int id, Monster m) {
