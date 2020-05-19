@@ -15,6 +15,16 @@ public class BadMonsterDaoC implements MonsterDao {
 
     Map<Integer, Monster> monsters = new HashMap<>();
     
+    //Constructor
+    private final String MONSTER_FILE;
+    public BadMonsterDaoC(){
+        MONSTER_FILE = "test.txt";
+    }
+    
+    public BadMonsterDaoC(String testFile){
+        MONSTER_FILE = testFile;
+    }
+    
     @Override
     public Monster addMonster(int id, Monster m) {
         if(monsters.containsKey(id)){

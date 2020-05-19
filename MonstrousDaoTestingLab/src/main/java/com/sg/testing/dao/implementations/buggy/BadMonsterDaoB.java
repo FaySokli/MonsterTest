@@ -15,6 +15,16 @@ public class BadMonsterDaoB implements MonsterDao {
 
     Map<Integer, Monster> monsters = new HashMap<>();
     
+    //Constructor
+    private final String MONSTER_FILE;
+    public BadMonsterDaoB(){
+        MONSTER_FILE = "test.txt";
+    }
+    
+    public BadMonsterDaoB(String testFile){
+        MONSTER_FILE = testFile;
+    }
+    
     @Override
     public Monster addMonster(int id, Monster m) {
         return monsters.put(id, m);

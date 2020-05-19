@@ -12,7 +12,16 @@ import java.util.List;
 import java.util.Map;
 
 public class BadMonsterDaoA implements MonsterDao {
-
+    //Constructor
+    private final String MONSTER_FILE;
+    public BadMonsterDaoA(){
+        MONSTER_FILE = "test.txt";
+    }
+    
+    public BadMonsterDaoA(String testFile){
+        MONSTER_FILE = testFile;
+    }
+    
     Map<Integer, Monster> monsters = new HashMap<>();
     int id;
     
