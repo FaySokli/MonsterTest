@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class AGoodMonsterDao implements MonsterDao {
 
-    Map<Integer, Monster> monsters = new HashMap<>();
+    Map<Integer, Monster>monsters=new HashMap<>();
 
     //Constructor
     private final String MONSTER_FILE;
